@@ -11,9 +11,39 @@ export const Container = styled.header`
   border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 
-  padding: 0 8rem;
+  padding: 0 4rem;
+`;
 
-  background: red;
+export const Profile = styled.div`
+  display: flex;
+  align-items: center;
+  
+
+  > img {
+    width: 4rem;
+    height: 4rem;
+
+    border-radius: 50%;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    margin-right: 1rem;
+    line-height: 1rem;
+
+    span {
+      font-size: 1rem;
+      color: ${({ theme }) => theme.COLORS.GRAY_100};
+    }
+
+    strong {
+      font-size: 1rem;
+      color: ${({ theme }) => theme.COLORS.WHITE};
+    }
+  }
 `;
