@@ -47,3 +47,16 @@ export const Profile = styled.div`
     }
   }
 `;
+
+export const Logout = styled.button`
+  border: none;
+  background: none;
+
+  > svg {
+    color: ${({ theme }) => theme.COLORS.PINK};
+    font-size: 1.5rem;
+
+    margin-left: 1rem;
+
+  }
+`;
