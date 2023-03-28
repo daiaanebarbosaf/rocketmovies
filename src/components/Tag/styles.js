@@ -1,13 +1,17 @@
 import styled from "styled-components";
 
-export const Contaner = styled.span`
-  font-size: 1.2rem;
+export const Container = styled.span`
+  
+  font-family: 'Roboto';
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
 
-  padding: 2rem 7rem;
-  border-radius: 5px;
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
   margin-right: 3rem;
 
-  color: ${({ theme }) => theme.COLORS.BACKGRUND_900};
-  background-color: ${({ theme }) => theme.COLORS.PINK};
+  color: ${({ theme }) => theme.COLORS.WHITE_200};
+  background-color: ${({ theme }) => theme.COLORS.GRAY_300};
   
 `;
