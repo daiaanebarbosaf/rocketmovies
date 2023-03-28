@@ -32,7 +32,7 @@ export function Details(){
           </Links>
         </Section>*/}
 
-        <Section title="Marcadores">
+        <Section>
           <Tag title="Ficção Ciêntífica"/>
         </Section>
 
