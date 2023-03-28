@@ -36,4 +36,19 @@ export const Content = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  > button:first-child {
+    align-self: start;
+  }
+
+  > h1 {
+    font-weight: 500;
+    padding-top: 2rem;
+  }
+
+  > p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: justify;
+  }
 `;
