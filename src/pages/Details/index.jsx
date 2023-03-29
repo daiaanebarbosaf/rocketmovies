@@ -20,7 +20,12 @@ export function Details(){
 
         <h1>Interestellar</h1>
        
-        <img src="../../assets/star.png" alt="Estrelinhas rosas para marcar a pontuação"/>
+        <img src="../../assets/stars.svg" alt="Estrelinhas rosas para marcar a pontuação"/>
+        <img 
+          class="writer"
+          src="https://github.com/daiaanebarbosaf.png" 
+          alt="Foto do usuário" 
+        />
 
         <Section>
           <Tag title="Ficção Ciêntífica"/>
