@@ -35,6 +35,14 @@ export const Content = styled.div`
     padding-top: 2rem;
   }
 
+  
+  > .writer {
+    width: 2rem;
+    height: 2rem;
+
+    border-radius: 50%;
+  }
+
   > p {
     font-size: 1rem;
     margin-top: 1rem;
