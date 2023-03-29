@@ -1,4 +1,5 @@
-import { Container, Content } from "./styles.js";
+import { FiClock } from 'react-icons/fi';
+import { Container, Content, Writer } from "./styles.js";
 import { Header } from "../../components/Header";
 
 import { Section } from "../../components/Section";
@@ -21,11 +22,18 @@ export function Details(){
         <h1>Interestellar</h1>
        
         <img src="../../assets/stars.svg" alt="Estrelinhas rosas para marcar a pontuação"/>
-        <img 
-          class="writer"
-          src="https://github.com/daiaanebarbosaf.png" 
-          alt="Foto do usuário" 
-        />
+
+        <Writer>
+          <img 
+            class="writer"
+            src="https://github.com/daiaanebarbosaf.png" 
+            alt="Foto do usuário" 
+          />
+
+          <p>Por Daiane Farias </p>
+          <FiClock/>
+          <p>23/05/22 às 08:00</p>
+        </Writer>
 
         <Section>
           <Tag title="Ficção Ciêntífica"/>
