@@ -35,17 +35,26 @@ export const Content = styled.div`
     padding-top: 2rem;
   }
 
-  
-  > .writer {
-    width: 2rem;
-    height: 2rem;
-
-    border-radius: 50%;
-  }
-
   > p {
     font-size: 1rem;
     margin-top: 1rem;
     text-align: justify;
+  }
+`;
+
+export const Writer = styled.div`
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-top: 0.5rem;
+
+> .writer {
+    width: 1rem;
+    height: 1rem;
+
+    border-radius: 50%;
   }
 `;
