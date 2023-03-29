@@ -57,4 +57,12 @@ export const Writer = styled.div`
 
     border-radius: 50%;
   }
+
+  > svg {
+    color: ${({ theme }) => theme.COLORS.PINK};
+    font-size: 1.5rem;
+
+    margin-left: 0.5rem;
+
+  }
 `;
