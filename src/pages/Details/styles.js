@@ -13,21 +13,10 @@ export const Container = styled.div`
   > main {
     grid-area: content;
     overflow-y: scroll;
-    padding: 6.4rem 0;
+    padding: 4.4rem 0;
   }
 `;
 
-export const Links = styled.ul`
-  list-style: none;
-
-  > li {
-    margin-top: 1.2rem;
-  }
-
-  a {
-    color: ${({ theme }) => theme.COLORS.WHITE};
-  }
-`;
 
 export const Content = styled.div`
   max-width: 80rem;
