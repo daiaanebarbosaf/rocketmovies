@@ -36,12 +36,10 @@ export const Brand = styled.div`
 
 export const Menu  = styled.ul`
     grid-area: menu;
-    background: green;
 `;
 
 export const Search = styled.div`
     grid-area: search;
-    background: violet;
 `;
 
 export const Content = styled.div`
