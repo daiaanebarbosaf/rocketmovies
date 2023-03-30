@@ -18,7 +18,20 @@ export const Container = styled.div`
 `;
 export const Brand = styled.div`
   grid-area: brand;
-  background: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color:${({ theme }) => theme.COLORS.BACKGROUND_700};
+
+  > h1 {
+    font-size: 2rem;
+    color:${({ theme }) => theme.COLORS.PINK};
+  }
+
 `;
 export const Menu  = styled.ul`
     grid-area: menu;
