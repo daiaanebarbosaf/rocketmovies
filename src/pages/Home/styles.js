@@ -33,19 +33,32 @@ export const Brand = styled.div`
   }
 
 `;
+
 export const Menu  = styled.ul`
     grid-area: menu;
     background: green;
 `;
+
 export const Search = styled.div`
     grid-area: search;
     background: violet;
 `;
+
 export const Content = styled.div`
     grid-area: content;
     background: blue;
 `;
+
 export const NewMovie= styled.button`
     grid-area: newmovie;
-    background: yellow;
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > svg {
+      margin-right: 1rem;
+    }
 `;
