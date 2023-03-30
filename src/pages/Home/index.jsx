@@ -1,7 +1,8 @@
+import { FiPlus } from 'react-icons/fi'; 
 import { Container, Brand, Menu,  Search, Content, NewMovie } from './styles';
 
 import { Header } from '../../components/Header';
-import { ButtonText } from '../../components/ButtonText';
+
 
 export function Home() {
   return (
@@ -13,9 +14,7 @@ export function Home() {
       <Header />
 
       <Menu>
-        <li><ButtonText title="Todos" isActive /></li>
-        <li><ButtonText title="React"/></li>
-
+    
       </Menu>
 
       <Search>
@@ -27,7 +26,8 @@ export function Home() {
       </Content>
 
       <NewMovie>
-        
+        <FiPlus />
+        Adicionar filme
       </NewMovie>
     </Container>
   );
