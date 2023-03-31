@@ -44,7 +44,6 @@ export const Search = styled.div`
 
 export const Content = styled.div`
     grid-area: content;
-    background: blue;
 `;
 
 export const NewMovie= styled.button`
