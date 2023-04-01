@@ -1,12 +1,13 @@
-import { RiShutDownLine } from 'react-icons/ri';
-import { Container, Profile, Logout } from './styles';
-
+import { Container, Profile } from './styles';
+import { FiPlus, FiSearch } from 'react-icons/fi'; 
+import { Input } from '../../components/Input';
 
 export function Header() {
   return (
     <Container>
 
       <Profile>
+      <Input placeholder="Pesquisar pelo título" icon={FiSearch}/>
         <div>
             <strong>Daiane Farias</strong>
             <span>sair</span>
@@ -17,10 +18,6 @@ export function Header() {
           alt="Foto do usuário" 
         />
       </Profile>
-
-      <Logout>
-        <RiShutDownLine />
-      </Logout>
 
     </Container>
   );
