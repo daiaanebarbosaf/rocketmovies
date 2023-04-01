@@ -10,9 +10,8 @@ export const Container = styled.div`
 
   grid-template-areas: 
   "brand header"
-  "menu search"
   "menu content"
-  "newmovie content";
+ ;
 
   background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 `;
@@ -34,7 +33,7 @@ export const Brand = styled.div`
 
 `;
 
-export const Menu  = styled.ul`
+export const Menu = styled.ul`
     grid-area: menu;
 `;
 
@@ -46,18 +45,4 @@ export const Content = styled.div`
     grid-area: content;
     padding: 0 2rem;
     overflow-y: auto;
-`;
-
-export const NewMovie= styled.button`
-    grid-area: newmovie;
-    background-color: ${({ theme }) => theme.COLORS.PINK};
-    border: none;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    > svg {
-      margin-right: 1rem;
-    }
 `;
