@@ -1,8 +1,7 @@
-import { FiPlus, FiSearch } from 'react-icons/fi'; 
-import { Container, Brand, Menu,  Search, Content, NewMovie } from './styles';
+import { FiPlus } from 'react-icons/fi'; 
+import { Container, Brand, Menu, Content} from './styles';
 
 import { Header } from '../../components/Header';
-import { Input } from '../../components/Input';
 import { Note } from '../../components/Note';
 
 
@@ -12,16 +11,7 @@ export function Home() {
       <Brand>
         <h1>Mymovies</h1>
       </Brand>
-
       <Header />
-
-      <Menu>
-    
-      </Menu>
-
-      <Search>
-        <Input placeholder="Pesquisar pelo título" icon={FiSearch}/>
-      </Search>
 
       <Content>
         <Note data={{
@@ -34,10 +24,6 @@ export function Home() {
         />
       </Content>
 
-      <NewMovie>
-        <FiPlus />
-        Adicionar filme
-      </NewMovie>
     </Container>
   );
 }
