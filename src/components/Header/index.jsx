@@ -5,9 +5,10 @@ import { Input } from '../../components/Input';
 export function Header() {
   return (
     <Container>
-
-      <Profile>
       <Input placeholder="Pesquisar pelo título" icon={FiSearch}/>
+      
+      <Profile>
+  
         <div>
             <strong>Daiane Farias</strong>
             <span>sair</span>
