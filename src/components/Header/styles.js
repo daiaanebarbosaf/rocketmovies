@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.header`
   grid-area: header;
 
-  height: 5rem;
   width: 100%;
 
   border-bottom-width: 1px;
@@ -17,6 +16,8 @@ export const Container = styled.header`
 `;
 
 export const Profile = styled.div`
+
+  width: 100%;
   display: flex;
   align-items: center;
   
@@ -45,18 +46,5 @@ export const Profile = styled.div`
       font-size: 1rem;
       color: ${({ theme }) => theme.COLORS.WHITE};
     }
-  }
-`;
-
-export const Logout = styled.button`
-  border: none;
-  background: none;
-
-  > svg {
-    color: ${({ theme }) => theme.COLORS.PINK};
-    font-size: 1.5rem;
-
-    margin-left: 1rem;
-
   }
 `;
