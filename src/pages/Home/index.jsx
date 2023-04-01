@@ -3,7 +3,6 @@ import { Container, Brand, Menu,  Search, Content, NewMovie } from './styles';
 
 import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
-import { Section } from '../../components/Section';
 import { Note } from '../../components/Note';
 
 
@@ -25,16 +24,14 @@ export function Home() {
       </Search>
 
       <Content>
-        <Section>
-          <Note data={{
-                title:'Interestellar',
-                tags: [
-                  {id: '1', name: 'Ficção Científica'},
-                  {id: '2', name: 'Drama'}
-                ]
-              }}
-            />
-        </Section>
+        <Note data={{
+              title:'Interestellar',
+              tags: [
+                {id: '1', name: 'Ficção Científica'},
+                {id: '2', name: 'Drama'}
+              ]
+            }}
+        />
       </Content>
 
       <NewMovie>
