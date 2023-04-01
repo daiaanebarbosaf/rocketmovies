@@ -5,18 +5,21 @@ export const Container = styled.div`
 
   display: flex;
   align-items: center;
+  justify-content: center;
+  
+  gap: 1rem;
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
   color: ${({ theme }) => theme.COLORS.GRAY_300};
 
-  margin-bottom: 2rem;
   border-radius: 10px;
 
   > input {
-    height: 5rem;
+    height: 3rem;
     width: 100%;
 
-    padding: 1rem;
+    display: flex;
+    align-items: center;
 
     color: ${({ theme }) => theme.COLORS.WHITE};
     background: transparent;
@@ -25,10 +28,9 @@ export const Container = styled.div`
     &placeholder {
       color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
-
   }
 
   > svg {
-      margin-left: 2rem;
+      margin-left: 1rem;
     }
 `;
