@@ -10,14 +10,14 @@ export const Container = styled.header`
   border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
   display: flex;
+  align-items: center;
   justify-content: flex-end;
 
-  padding: 0 4rem;
 `;
 
 export const Profile = styled.div`
 
-  width: 100%;
+  width: 40%;
   display: flex;
   align-items: center;
   
@@ -35,6 +35,8 @@ export const Profile = styled.div`
     align-items: flex-end;
 
     margin-right: 1rem;
+
+    margin-left: 2rem;
     line-height: 1rem;
 
     span {
