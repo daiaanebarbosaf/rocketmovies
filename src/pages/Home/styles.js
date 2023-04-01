@@ -5,8 +5,8 @@ export const Container = styled.div`
   height: 100vh;
 
   display: grid;
-  grid-template-columns: 25rem auto;
-  grid-template-rows: 105px 128px auto 64px;
+  grid-template-columns: 20rem auto;
+  grid-template-rows: 6rem 20rem auto 64px;
 
   grid-template-areas: 
   "brand header"
@@ -15,6 +15,7 @@ export const Container = styled.div`
 
   background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 `;
+
 export const Brand = styled.div`
   grid-area: brand;
 
@@ -27,7 +28,10 @@ export const Brand = styled.div`
   border-bottom-color:${({ theme }) => theme.COLORS.BACKGROUND_700};
 
   > h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+
     color:${({ theme }) => theme.COLORS.PINK};
   }
 
