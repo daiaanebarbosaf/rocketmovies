@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
-  width: 100%;
+  width: 91%;
   background-color: ${({ theme }) => theme.COLORS.PINK_100};
 
   border: none;
   border-radius: 10px;
 
-  padding: 2rem;
+  padding: 1rem;
   margin-bottom: 1rem;
 
   > h1 {
@@ -30,6 +30,6 @@ export const Container = styled.button`
   > footer {
     width: 100%;
     display: flex;
-    margin-top: 4rem;
+    margin-top: 1rem;
   }
 `;
