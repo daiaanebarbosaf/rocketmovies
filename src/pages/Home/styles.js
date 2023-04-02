@@ -49,4 +49,29 @@ export const Content = styled.div`
     grid-area: content;
     padding: 0 2rem;
     overflow-y: auto;
+
+`;
+
+export const NewMovie = styled.button`
+
+  width: 20%;
+  background-color: ${({ theme }) => theme.COLORS.PINK};
+
+  color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+
+  height: 3rem;
+  border: 0;
+  padding: 0 1.6rem;
+  margin-top: 1.6rem;
+  border-radius: 10px;
+
+  font-weight: 500;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  > svg {
+    margin-right: 0.5rem;
+  }
 `;
