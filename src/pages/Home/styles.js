@@ -6,7 +6,7 @@ export const Container = styled.div`
 
   display: grid;
   grid-template-columns: 20rem auto;
-  grid-template-rows: 6rem 20rem auto 64px;
+  grid-template-rows: 6rem 8rem auto 64px;
 
   grid-template-areas: 
   "brand header"
@@ -52,8 +52,8 @@ export const AddMovies = styled.div`
 
 export const Content = styled.div`
     grid-area: content;
-    padding: 0 2rem;
     overflow-y: auto;
+
 `;
 
 export const NewMovie = styled.button`
