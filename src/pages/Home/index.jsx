@@ -20,10 +20,18 @@ export function Home() {
           <FiPlus />
           Adicionar filme
         </NewMovie>
-
       </AddMovies>
 
       <Content>
+        <Note data={{
+              title:'Interestellar',
+              tags: [
+                {id: '1', name: 'Ficção Científica'},
+                {id: '2', name: 'Drama'}
+              ]
+            }}
+        />
+
         <Note data={{
               title:'Interestellar',
               tags: [
