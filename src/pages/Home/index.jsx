@@ -1,5 +1,5 @@
 import { FiPlus } from 'react-icons/fi'; 
-import { Container, Brand, Menu, Content} from './styles';
+import { Container, Brand, NewMovie, Content} from './styles';
 
 import { Header } from '../../components/Header';
 import { Button } from '../../components/Button';
@@ -17,9 +17,10 @@ export function Home() {
       <Content>
         <h2>Meus filmes</h2>
 
-       <Button title="Adicionar filme">
-        
-       </Button>
+        <NewMovie>
+          <FiPlus />
+          Adicionar filme
+        </NewMovie>
 
         <Note data={{
               title:'Interestellar',
