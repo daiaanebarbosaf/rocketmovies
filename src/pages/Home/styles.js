@@ -10,6 +10,7 @@ export const Container = styled.div`
 
   grid-template-areas: 
   "brand header"
+  "menu addmovies"
   "menu content"
  ;
 
@@ -39,17 +40,20 @@ export const Brand = styled.div`
 
 export const Menu = styled.ul`
     grid-area: menu;
+
 `;
 
-export const Search = styled.div`
-    grid-area: search;
+export const AddMovies = styled.div`
+    grid-area: addmovies;
+
+    margin-top: 2rem;
+    display: flex;
 `;
 
 export const Content = styled.div`
     grid-area: content;
     padding: 0 2rem;
     overflow-y: auto;
-
 `;
 
 export const NewMovie = styled.button`
@@ -62,7 +66,9 @@ export const NewMovie = styled.button`
   height: 3rem;
   border: 0;
   padding: 0 1.6rem;
-  margin-top: 1.6rem;
+  
+  margin-left: 38rem;
+
   border-radius: 10px;
 
   font-weight: 500;
