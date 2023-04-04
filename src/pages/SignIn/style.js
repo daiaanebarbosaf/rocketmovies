@@ -42,7 +42,7 @@ export const Container = styled.div`
   > a {
     margin-top: 6rem;
     color:${({ theme }) => theme.COLORS.PINK};
-
+    margin-left: 8rem;
   }
  `;
 
