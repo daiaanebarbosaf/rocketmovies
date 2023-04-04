@@ -8,6 +8,7 @@ export const Container = styled.div`
   justify-content: center;
   
   gap: 1rem;
+  margin-bottom: 0.5rem;
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
   color: ${({ theme }) => theme.COLORS.GRAY_300};
