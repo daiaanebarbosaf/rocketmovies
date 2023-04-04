@@ -35,14 +35,14 @@ export const Container = styled.div`
   }
 
   > p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color:${({ theme }) => theme.COLORS.GRAY_100};
   }
 
   > a {
     margin-top: 6rem;
     color:${({ theme }) => theme.COLORS.PINK};
-    margin-left: 8rem;
+    margin-left: 6rem;
   }
  `;
 
