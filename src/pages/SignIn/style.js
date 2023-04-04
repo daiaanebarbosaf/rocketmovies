@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import backgroundImg from '../../assets/bg.png';
 
 export const Container = styled.div`
   height: 100vh;
@@ -43,5 +44,6 @@ export const Container = styled.div`
     color:${({ theme }) => theme.COLORS.PINK};
 
   }
-
  `;
+
+ 
