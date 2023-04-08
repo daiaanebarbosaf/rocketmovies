@@ -9,9 +9,10 @@ export const Container = styled.div`
   
   gap: 1rem;
   margin-bottom: 0.5rem;
+  padding-left: 1rem;
 
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-  color: ${({ theme }) => theme.COLORS.GRAY_300};
+  color: ${({ theme }) => theme.COLORS.GRAY_100};
 
   border-radius: 10px;
 
