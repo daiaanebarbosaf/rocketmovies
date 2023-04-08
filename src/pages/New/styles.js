@@ -18,6 +18,11 @@ export const Form = styled.form`
   max-width: 550px;
   margin: 3rem 5rem auto;
 
+  display: flex;
+  align-items: left;
+
+  flex-direction: column;
+
   > header {
     display: flex;
     align-items: left;
@@ -28,6 +33,10 @@ export const Form = styled.form`
 
     a {
       color:${({ theme }) => theme.COLORS.PINK};
+
+      svg {
+        margin-right: 1rem;
+      }
     }
   }
 `;
