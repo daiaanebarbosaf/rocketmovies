@@ -10,8 +10,7 @@ export const Container = styled.div`
   grid-template-rows: 6rem 8rem auto;
 
   grid-template-areas: 
-  "brand header"
-  "menu content";
+  "brand header";
 `;
 
 export const Brand = styled.div`
@@ -49,7 +48,6 @@ export const Content = styled.div`
     grid-area: content;
     overflow-y: auto;
 
-    width: 1200px;
 `;
 
 
