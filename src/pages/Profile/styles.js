@@ -17,10 +17,9 @@ export const Container = styled.div`
 
     > a {
       color: ${({ theme }) => theme.COLORS.PINK};
-      x
     }
 
-    svg {
+    > svg {
       color: ${({ theme }) => theme.COLORS.PINK};
       margin-right: 0.5rem;
     }
