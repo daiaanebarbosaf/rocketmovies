@@ -6,6 +6,7 @@ import { Input } from '../../components/Input';
 import { Textarea } from '../../components/Textarea';
 import { NoteItem } from '../../components/NoteItem';
 import { Section } from '../../components/Section';
+import { Button } from '../../components/Button';
 
 
 import { Container, Form } from './styles';
@@ -26,16 +27,26 @@ export function New() {
             <h1>Novo filme</h1>
           </header>
 
-          <Input 
-            placeholder="Título"
-          />
-          <Input 
-            placeholder="Sua nota (de 0 a 5)"
-          />
+          <div className="spacing-between">
+            <Input 
+              placeholder="Título"
+            />
+            <Input 
+              placeholder="Sua nota (de 0 a 5)"
+            />
+          </div>
+
           <Textarea placeholder="Observações"/>
 
           <Section title="Marcadores"/>
-          <NoteItem value=" Oie"/>
+          <div className="spacing-between">
+            <NoteItem value="Minions"/>
+            <NoteItem value="Vingadores"/>
+            <NoteItem isNew placeholder="Novo Marcador"/>
+          </div>
+
+          <Button title="Salvar" />
+
         </Form>
       </main>
 
