@@ -10,12 +10,23 @@ export const Container = styled.div`
   "header"
   "content";
 
+  main {
+    grid-area: content;
+    overflow-y: auto;
+  }
+
+  .spacing-between {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 `;
 
 export const Form = styled.form`
   width: 100%;
 
-  max-width: 550px;
+  max-width: 1150px;
   margin: 3rem 5rem auto;
 
   display: flex;
