@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  width: 30%;
   display: flex;
   align-items: center;
 
@@ -17,6 +18,14 @@ export const Container = styled.div`
   > button {
     border: none;
     background: none;
+  }
+
+  .button-delete {
+    color: ${({ theme }) => theme.COLORS.PINK};
+  }
+
+  .button-add {
+    color: ${({ theme }) => theme.COLORS.PINK};
   }
 
   > input {
