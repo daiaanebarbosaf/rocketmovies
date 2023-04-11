@@ -39,7 +39,7 @@ export function New() {
           <Textarea placeholder="Observações"/>
 
           <Section title="Marcadores"/>
-          <div className="spacing-between">
+          <div className="spacing-between tags">
             <NoteItem value="Minions"/>
             <NoteItem value="Vingadores"/>
             <NoteItem isNew placeholder="Novo Marcador"/>
