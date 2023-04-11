@@ -9,7 +9,7 @@ import { Section } from '../../components/Section';
 import { Button } from '../../components/Button';
 
 
-import { Container, Form } from './styles';
+import { Container, Form, ButtonDelete } from './styles';
 
 export function New() {
   return(
@@ -45,8 +45,14 @@ export function New() {
             <NoteItem isNew placeholder="Novo Marcador"/>
           </div>
 
-          <Button title="Salvar" />
-
+          <div className="buttons-spacing-between">
+            <ButtonDelete>
+              Excluir filme
+            </ButtonDelete>
+            <div className="button-save">
+              <Button title="Salvar" />
+            </div>
+          </div>
         </Form>
       </main>
 
