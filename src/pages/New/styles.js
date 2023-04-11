@@ -20,6 +20,14 @@ export const Container = styled.div`
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 1rem;
+
+  }
+
+  .tags {
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
+    padding: 1rem;
+
+    align-items: center;
   }
 `;
 
@@ -35,7 +43,7 @@ export const Form = styled.form`
   flex-direction: column;
 
   .button-save {
-    width:50%;
+    width: 50%;
   }
 
   .buttons-spacing-between {
