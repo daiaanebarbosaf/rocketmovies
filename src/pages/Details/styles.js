@@ -12,8 +12,13 @@ export const Container = styled.div`
 
   > main {
     grid-area: content;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 4.4rem 0;
+
+    svg {
+      color: ${({ theme }) => theme.COLORS.PINK};
+      margin-right: 0.5rem;
+    }
   }
 `;
 
@@ -26,6 +31,13 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
 
+  .back {
+    display: flex;
+    align-items: center;
+    
+    color: ${({ theme }) => theme.COLORS.PINK};
+  }
+
   > button:first-child {
     align-self: start;
   }
@@ -36,7 +48,7 @@ export const Content = styled.div`
   }
 
   > p {
-    font-size: 1rem;
+    font-size: 16px;
     margin-top: 1rem;
     text-align: justify;
   }
@@ -63,6 +75,5 @@ export const Writer = styled.div`
     font-size: 1.5rem;
 
     margin-left: 0.5rem;
-
   }
 `;
