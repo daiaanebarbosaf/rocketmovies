@@ -27,6 +27,8 @@ export const Container = styled.div`
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
     padding: 1rem;
 
+    border-radius: 8px;
+
     align-items: center;
   }
 `;
