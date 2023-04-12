@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 30%;
+  width: 20%;
   display: flex;
   align-items: center;
 
@@ -11,7 +11,6 @@ export const Container = styled.div`
 
   border: ${({ theme, isNew }) => isNew ? `1px dashed ${theme.COLORS.GRAY_300}` : "none"};
 
-  margin-bottom: 8px;
   border-radius: 10px;
   padding-right: 16px;
 
