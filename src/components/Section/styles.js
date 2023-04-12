@@ -1,18 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  margin: 1rem 0 2rem;
+  margin: 1px 0 2rem;
 
   > h2 {
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color:${({ theme }) => theme.COLORS.BACKGROUNG_700};
-
-    padding-bottom: 1.6rem;
-    margin-bottom: 2.4rem;
-
-    color: ${({ theme }) => theme.COLORS.GRAY_100};
+    font-family: 'Roboto Slab';
+    font-style: normal;
     font-size: 1rem;
     font-weight: 400;
+  
+    color: ${({ theme }) => theme.COLORS.GRAY_200};
+
+    padding-top: 1rem;
   }
+
 `;
