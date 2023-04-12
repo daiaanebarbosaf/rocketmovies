@@ -5,6 +5,7 @@ import { Header } from "../../components/Header";
 import { Section } from "../../components/Section";
 import { Tag } from "../../components/Tag";
 import { ButtonText } from "../../components/ButtonText";
+import { Rating } from "../../components/Rating";
 
 
 
@@ -22,9 +23,7 @@ export function Details(){
           </div>  
 
           <h1>Interestellar</h1>
-        
-          <img src="../../assets/stars.svg" alt="Estrelinhas rosas para marcar a pontuação"/>
-
+            <Rating />
           <Writer>
             <img 
               class="writer"
