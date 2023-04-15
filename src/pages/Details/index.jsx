@@ -22,8 +22,11 @@ export function Details(){
             <ButtonText className="back" title="Voltar"/>
           </div>  
 
-          <h1>Interestellar</h1>
+          <div className="title">
+            <h1>Interestellar</h1>
             <Rating />
+          </div>
+
           <Writer>
             <img 
               class="writer"
