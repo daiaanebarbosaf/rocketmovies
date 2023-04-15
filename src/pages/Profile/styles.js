@@ -9,7 +9,6 @@ export const Container = styled.div`
 
     display: flex;
     align-items: center;
-  
 
     background: ${({ theme }) => theme.COLORS.PINK_100};
 
@@ -17,11 +16,14 @@ export const Container = styled.div`
 
     > a {
       color: ${({ theme }) => theme.COLORS.PINK};
+
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     > svg {
       color: ${({ theme }) => theme.COLORS.PINK};
-      margin-right: 0.5rem;
     }
   }
 `;
