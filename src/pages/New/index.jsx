@@ -27,7 +27,7 @@ export function New() {
             <h1>Novo filme</h1>
           </header>
 
-          <div className="spacing-between">
+          <div className="inputs">
             <Input 
               placeholder="Título"
             />
