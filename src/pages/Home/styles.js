@@ -42,7 +42,7 @@ export const Container = styled.div`
 export const AddMovies = styled.div`
     grid-area: addmovies;
 
-    width: 1020px;
+    width: 1130px;
     margin-left: 120px;
 
     display: flex;
@@ -52,7 +52,7 @@ export const AddMovies = styled.div`
 
 export const Content = styled.div`
     grid-area: content;
-
+    margin-right: 1rem;
 `;
 
 export const NewMovie = styled.button`
