@@ -5,59 +5,57 @@ export const Container = styled.div`
   height: 100vh;
 
   display: grid;
-  grid-template-columns: 20rem auto;
-  grid-template-rows: 6rem 8rem auto 64px;
+  grid-template-rows: 8rem auto;
+  grid-template-areas:
+  "header"
+  "addmovies"
+  "content"
+  ;
 
-  grid-template-areas: 
-  "brand header"
-  "menu addmovies"
-  "menu content"
- ;
 
-  background: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-`;
+  > main {
+    max-width: 1137px;
 
-export const Brand = styled.div`
-  grid-area: brand;
+    margin: 30px auto;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    grid-area: content;
+    overflow-y: auto;
 
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color:${({ theme }) => theme.COLORS.BACKGROUND_700};
 
-  > h1 {
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 700;
-
-    color:${({ theme }) => theme.COLORS.PINK};
+    svg {
+      color: ${({ theme }) => theme.COLORS.PINK};
+      margin-right: 0.5rem;
+    }
   }
 
-`;
-
-export const Menu = styled.ul`
-    grid-area: menu;
+  > main::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  > main::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+    border-radius: 8px;
+  }
 
 `;
 
 export const AddMovies = styled.div`
     grid-area: addmovies;
 
-    margin-top: 2rem;
+    width: 1020px;
+    margin-left: 120px;
+
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 `;
 
 export const Content = styled.div`
     grid-area: content;
-    overflow-y: auto;
 
 `;
 
 export const NewMovie = styled.button`
-
   width: 20%;
   background-color: ${({ theme }) => theme.COLORS.PINK};
 
@@ -66,8 +64,6 @@ export const NewMovie = styled.button`
   height: 3rem;
   border: 0;
   padding: 0 1.6rem;
-  
-  margin-left: 38rem;
 
   border-radius: 10px;
 
