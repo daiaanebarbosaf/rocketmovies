@@ -15,6 +15,15 @@ export const Container = styled.div`
     overflow-y: auto;
   }
 
+  > main::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  > main::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+    border-radius: 8px;
+  }
+
   .spacing-between {
     display: flex;
     justify-content: flex-start;
@@ -30,6 +39,14 @@ export const Container = styled.div`
     border-radius: 8px;
 
     align-items: center;
+  }
+
+  .inputs {
+    width: 100%;
+
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
   }
 `;
 
