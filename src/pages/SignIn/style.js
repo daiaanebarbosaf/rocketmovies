@@ -40,7 +40,7 @@ export const Container = styled.div`
   }
 
   > a {
-    margin-top: 6rem;
+    margin-top: 2rem;
     color:${({ theme }) => theme.COLORS.PINK};
     margin-left: 6rem;
   }
