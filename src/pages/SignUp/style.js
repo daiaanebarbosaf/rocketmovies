@@ -40,9 +40,13 @@ export const Container = styled.div`
   }
 
   > a {
-    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    margin-top: 2rem;
     color:${({ theme }) => theme.COLORS.PINK};
-    margin-left: 4rem;
+    margin-left: 3rem;
   }
  `;
 
