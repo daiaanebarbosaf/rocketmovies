@@ -11,14 +11,32 @@ export const Container = styled.div`
   "content";
 
   > main {
+    width: 100%;
+    max-width: 1137px;
+
+    margin: 40px auto;
+    
+
     grid-area: content;
     overflow-y: auto;
-    padding: 4.4rem 0;
+    padding: 4.4rem 1rem;
 
     svg {
       color: ${({ theme }) => theme.COLORS.PINK};
       margin-right: 0.5rem;
     }
+  }
+
+
+  > main::-webkit-scrollbar {
+    width: 8px;
+   
+  }
+  
+  > main::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.PINK};
+    border-radius: 8px;
+  
   }
 `;
 
@@ -34,7 +52,6 @@ export const Content = styled.div`
     display: flex;
     align-items: center;
     color: ${({ theme }) => theme.COLORS.PINK};
-
   }
 
   .title {
@@ -64,6 +81,8 @@ export const Content = styled.div`
   > p {
     font-size: 16px;
     margin-top: 1rem;
+    margin-bottom: 3rem;
+
     text-align: justify;
   }
 `;
@@ -83,6 +102,10 @@ export const Writer = styled.div`
     height: 1rem;
 
     border-radius: 50%;
+  }
+
+  > img {
+    margin-right: 0.5rem;
   }
 
   > svg {
