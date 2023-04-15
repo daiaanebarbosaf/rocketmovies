@@ -34,8 +34,14 @@ export const Content = styled.div`
   .back {
     display: flex;
     align-items: center;
-    
     color: ${({ theme }) => theme.COLORS.PINK};
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 1rem;
   }
 
   > button:first-child {
