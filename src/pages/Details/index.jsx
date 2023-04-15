@@ -1,5 +1,5 @@
 import { FiClock, FiArrowLeft } from 'react-icons/fi';
-import { Container, Content, Writer } from "./styles.js";
+import { Container, Content, Writer, Tags } from "./styles.js";
 import { Header } from "../../components/Header";
 
 import { Section } from "../../components/Section";
@@ -40,9 +40,12 @@ export function Details(){
           </Writer>
 
           <Section>
-            <Tag title="Ficção Ciêntífica"/>
-            <Tag title="Drama"/>
-            <Tag title="Família"/>
+            <Tags>
+              <Tag title="Ficção Ciêntífica"/>
+              <Tag title="Drama"/>
+              <Tag title="Família"/>
+            </Tags>
+        
           </Section>
 
           <p>
