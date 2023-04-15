@@ -22,7 +22,6 @@ export const Container = styled.div`
   }
 `;
 
-
 export const Content = styled.div`
   max-width: 80rem;
 
@@ -35,13 +34,22 @@ export const Content = styled.div`
     display: flex;
     align-items: center;
     color: ${({ theme }) => theme.COLORS.PINK};
+
   }
 
   .title {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
     display: flex;
     align-items: center;
     justify-self: center;
     gap: 1rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   > button:first-child {
@@ -61,15 +69,16 @@ export const Content = styled.div`
 `;
 
 export const Writer = styled.div`
-
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
 
-  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
 
 > .writer {
+    display: flex;
+    align-items: center;
+    
     width: 1rem;
     height: 1rem;
 
@@ -80,6 +89,16 @@ export const Writer = styled.div`
     color: ${({ theme }) => theme.COLORS.PINK};
     font-size: 1.5rem;
 
-    margin-left: 0.5rem;
+    margin-left: 1rem;
   }
 `;
+
+export const Tags = styled.div`
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+
+  display: flex;
+  gap: 0.5rem;
+`;
+
