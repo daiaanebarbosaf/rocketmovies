@@ -19,7 +19,7 @@ export const Container = styled.div`
 
     grid-area: content;
     overflow-y: auto;
-    padding: 4.4rem 1rem;
+    padding: 3.4rem 1rem;
 
     svg {
       color: ${({ theme }) => theme.COLORS.PINK};
