@@ -19,7 +19,7 @@ export function Header() {
           />
       </Search>
 
-      <Profile>
+      <Profile to="/profile">
 
         <div>
           <strong>Daiane Farias</strong>
