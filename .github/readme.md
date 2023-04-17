@@ -32,7 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 🔖 Layout
 Página de SingIn:
 ![prewiew](01singin.PNG)
-Página de Singup:
+Página de SingUp:
 ![prewiew](02singup.PNG)
 Página de Home:
 ![prewiew](03home.PNG)
