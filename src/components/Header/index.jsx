@@ -8,7 +8,7 @@ export function Header() {
   return (
     <Container>
       <Brand>
-      <h1>MyMovies</h1>
+      <h1>RocketMovies</h1>
       </Brand>
 
       <Search>
