@@ -12,7 +12,7 @@
 </p>
 
 <p>
-  Projeto onde trabalhei o front end com React. Foi um projeto proposto pela #Rocketseat com exercício do stage 09 onde pude colocar em prática tudo que foi aprendendido sobre componentização, styled-component e mais.
+  Projeto onde trabalhei o front end com React. Foi um projeto proposto pela #Rocketseat como exercício do stage 09 onde pude colocar em prática tudo que foi aprendendido sobre componentização, styled-component e mais.
 </p>
 
 <br>
