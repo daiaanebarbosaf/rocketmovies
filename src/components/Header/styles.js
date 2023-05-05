@@ -47,11 +47,6 @@ export const Profile = styled(Link)`
     margin-left: 16px;
     line-height: 24px;
 
-    span {
-      font-size: 14px;
-      color: ${({ theme }) => theme.COLORS.GRAY_100};
-    }
-
     strong {
       font-size: 18px;
       color: ${({ theme }) => theme.COLORS.WHITE};
@@ -79,4 +74,13 @@ export const Brand = styled.div`
     color:${({ theme }) => theme.COLORS.PINK};
   }
 `;
+
+export const Logout = styled.button`
+  border: none;
+  background: none;
+
+  font-size: 14px;
+  color: ${({ theme }) => theme.COLORS.GRAY_100};
+`;
+
 
