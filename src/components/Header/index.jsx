@@ -1,10 +1,13 @@
 import { Container, Profile, Search, Brand, Logout  } from './styles';
 
 import { FiSearch } from 'react-icons/fi';
+import { useAuth } from '../../hooks/auth';
 
 import { Input } from '../../components/Input';
 
 export function Header() {
+  const { signOut } = useAuth();
+
   return (
     <Container>
       <Brand>
@@ -23,9 +26,9 @@ export function Header() {
 
         <div>
           <strong>Daiane Farias</strong>
-        <Logout>
-          Sair
-        </Logout>
+          <Logout onClick={signOut}>
+            Sair
+          </Logout>
           
         </div>
         <img 
