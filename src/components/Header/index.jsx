@@ -1,4 +1,4 @@
-import { Container, Profile, Search, Brand } from './styles';
+import { Container, Profile, Search, Brand, Logout  } from './styles';
 
 import { FiSearch } from 'react-icons/fi';
 
@@ -23,7 +23,10 @@ export function Header() {
 
         <div>
           <strong>Daiane Farias</strong>
-          <span>Sair</span>
+        <Logout>
+          Sair
+        </Logout>
+          
         </div>
         <img 
           src="https://github.com/daiaanebarbosaf.png" 
