@@ -11,7 +11,7 @@ export function Header() {
   return (
     <Container>
       <Brand>
-      <h1>RocketMovies</h1>
+        <h1>RocketMovies</h1>
       </Brand>
 
       <Search>
@@ -26,6 +26,7 @@ export function Header() {
 
         <div>
           <strong>Daiane Farias</strong>
+
           <Logout onClick={signOut}>
             Sair
           </Logout>
