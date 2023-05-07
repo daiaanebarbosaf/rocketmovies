@@ -81,6 +81,10 @@ export const Logout = styled.button`
 
   font-size: 14px;
   color: ${({ theme }) => theme.COLORS.GRAY_100};
+
+  position: absolute;
+  top: 68px;
+  right: 146px
 `;
 
 
