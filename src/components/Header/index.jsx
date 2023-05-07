@@ -26,18 +26,16 @@ export function Header() {
 
         <div>
           <strong>Daiane Farias</strong>
-
-          <Logout onClick={signOut}>
-            Sair
-          </Logout>
-          
         </div>
         <img 
           src="https://github.com/daiaanebarbosaf.png" 
           alt="Foto do usuário(a)" 
         />
-
       </Profile>
+
+      <Logout onClick={signOut}>
+        Sair
+      </Logout>
     </Container>
   );
 }
