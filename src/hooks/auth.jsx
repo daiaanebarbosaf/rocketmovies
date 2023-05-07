@@ -4,7 +4,14 @@ import { api } from '../services/api';
 export const AuthContext = createContext({});
 
 function AuthProvider({ children }) {
-  const [ data, setData ] = useState({})
+  const [ data, setData ] = useState({});
+
+  function signOut(){
+    localStorage.removeItem("@rocketmovies:token");
+    localStorage.removeItem("@rocketmovies:user");
+
+    setData({});
+  }
 
   async function signIn({ email, password}){
 
@@ -16,7 +23,7 @@ function AuthProvider({ children }) {
       localStorage.setItem("@rocketmovies:token", token);
 
       api.defaults.headers.authorization = `Bearer ${ token }`;
-      setData({ user, token })
+      setData({ user, token });
 
     } catch (error) {
       if(error.response){
@@ -26,13 +33,6 @@ function AuthProvider({ children }) {
       }
     }
 
-  }
-
-  function signOut(){
-    localStorage.removeItem("@rocketmovies:token");
-    localStorage.removeItem("@rocketmovies:user");
-
-    setData({});
   }
 
   useEffect(() => {
@@ -67,4 +67,4 @@ function useAuth(){
   return context;
 }
 
-export { AuthProvider, useAuth }
+export { AuthProvider, useAuth };
