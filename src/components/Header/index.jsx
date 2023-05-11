@@ -2,11 +2,14 @@ import { Container, Profile, Search, Brand, Logout  } from './styles';
 
 import { FiSearch } from 'react-icons/fi';
 import { useAuth } from '../../hooks/auth';
+import { api } from '../../services/api';
 
 import { Input } from '../../components/Input';
 
 export function Header() {
-  const { signOut } = useAuth();
+  const { signOut, user } = useAuth();
+
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
 
   return (
     <Container>
@@ -25,11 +28,11 @@ export function Header() {
       <Profile to="/profile">
 
         <div>
-          <strong>Daiane Farias</strong>
+          <strong>{user.name}</strong>
         </div>
         <img 
-          src="https://github.com/daiaanebarbosaf.png" 
-          alt="Foto do usuário(a)" 
+          src={avatarUrl} 
+          alt={user.name}
         />
       </Profile>
 
