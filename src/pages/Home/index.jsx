@@ -1,4 +1,9 @@
+import { useState, useEffect } from 'react';
+
 import { FiPlus } from 'react-icons/fi'; 
+
+import { api } from '../../services/api';
+
 import { Container, NewMovie, AddMovies, Content } from './styles';
 
 import { Header } from '../../components/Header';
