@@ -15,6 +15,13 @@ import { Button } from '../../components/Button';
 import { Container, Form, ButtonDelete } from './styles';
 
 export function New() {
+  const [tags, setTags] = useState([]);
+  const [newTag, setNewTag] = useState("");
+
+  function handleAddTag(){
+    setTags(prevState => [...prevState, newTag]);
+    setNewTag("");
+  }
 
   return(
     <Container>
@@ -44,9 +51,23 @@ export function New() {
 
           <Section title="Marcadores"/>
           <div className="spacing-between tags">
-            <NoteItem value="Minions"/>
-            <NoteItem value="Vingadores"/>
-            <NoteItem isNew placeholder="Novo Marcador"/>
+            {
+              tags.map((tag, index) => (
+                <NoteItem 
+                  key={String(index)}
+                  value={tag}
+                  onClick={() => {}}
+                />
+              ))
+            }
+            
+            <NoteItem 
+              isNew 
+              placeholder="Novo Marcador"
+              onChange={e => setNewTag(e.target.value)}
+              value={newTag}
+              onClick={handleAddTag}
+            />
           </div>
 
           <div className="buttons-spacing-between">
