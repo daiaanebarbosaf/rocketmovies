@@ -28,15 +28,6 @@ export function Home() {
                 ]
               }}
           />
-
-          <Note data={{
-                title:'Interestellar',
-                tags: [
-                  {id: '1', name: 'Ficção Científica'},
-                  {id: '2', name: 'Drama'}
-                ]
-              }}
-          />
         </Content>
       </main>
     </Container>
