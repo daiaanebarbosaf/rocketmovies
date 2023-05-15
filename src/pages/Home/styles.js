@@ -40,6 +40,12 @@ export const Container = styled.div`
 
 `;
 
+export const Search = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 0 64px;
+  flex-grow: 1;
+`;
 export const AddMovies = styled.div`
     grid-area: addmovies;
 
