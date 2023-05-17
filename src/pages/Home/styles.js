@@ -38,14 +38,11 @@ export const Container = styled.div`
     border-radius: 8px;
   }
 
+  .input{
+    max-width: 50%;
+  }
 `;
 
-export const Search = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 0 64px;
-  flex-grow: 1;
-`;
 export const AddMovies = styled.div`
     grid-area: addmovies;
 
