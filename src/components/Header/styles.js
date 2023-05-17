@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Container = styled.header`
   grid-area: header;
+  
   width: 100%;
   height: 105px;
 
