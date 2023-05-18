@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { FiPlus, FiSearch } from 'react-icons/fi'; 
 import { api } from '../../services/api';
@@ -12,6 +13,12 @@ import { Input } from '../../components/Input';
 export function Home() {
   const [search, setSearch] = useState("");
   const [movies, setMovies] = useState([]);
+
+  const navigate = useNavigate();
+
+  function handleDetails(id){
+    navigate(`/details/${id}`);
+  }
 
   useEffect(() => {
     async function fetchMovies(){
@@ -27,7 +34,6 @@ export function Home() {
       <Header>
         
       <Input 
-            className="input"
             placeholder="Pesquisar pelo título"
             type="text"
             icon={FiSearch}
@@ -51,6 +57,7 @@ export function Home() {
               <Note 
                 key={String(movie.id)}
                 data={movie}
+                onClick={() => handleDetails(movie.id)}
               />
             ))
           }
