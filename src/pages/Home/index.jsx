@@ -31,7 +31,7 @@ export function Home() {
             placeholder="Pesquisar pelo título"
             type="text"
             icon={FiSearch}
-            onChange={() => setSearch(e.target.value)}
+            onChange={(e) => setSearch(e.target.value)}
           />
       </Header>
 
