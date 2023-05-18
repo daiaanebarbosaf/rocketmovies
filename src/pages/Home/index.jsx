@@ -10,7 +10,17 @@ import { Note } from '../../components/Note';
 import { Input } from '../../components/Input';
 
 export function Home() {
+  const [search, setSearch] = useState("");
+  const [movies, setMovies] = useState([]);
 
+  useEffect(() => {
+    async function fetchMovies(){
+      const response = await api.get(`/notes?title=${search}`);
+      setMovies(response.data);
+    }
+
+    fetchMovies();
+  },[search])
 
   return (
     <Container>
@@ -21,6 +31,7 @@ export function Home() {
             placeholder="Pesquisar pelo título"
             type="text"
             icon={FiSearch}
+            onChange={() => setSearch(e.target.value)}
           />
       </Header>
 
@@ -35,7 +46,14 @@ export function Home() {
 
       <main>
         <Content>
-
+          {
+            movies.map(movie => (
+              <Note 
+                key={String(movie.id)}
+                data={movie}
+              />
+            ))
+          }
         </Content>
       </main>
     </Container>
