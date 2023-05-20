@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { api } from '../../services/api';
+import { useAuth } from '../../hooks/auth';
 
 import { FiClock, FiArrowLeft } from 'react-icons/fi';
 import { Container, Content, Writer, Tags } from "./styles.js";
@@ -19,6 +20,8 @@ export function Details(){
 
   const params = useParams();
 
+  const { user } = useAuth();
+
   useEffect(() => {
     async function fetMovie(){
       const response = await api.get(`/notes/${params.id}`);
@@ -33,8 +36,6 @@ export function Details(){
     <Container>
 
       <Header />
-
-
       {     
         data && 
           <main>
@@ -56,22 +57,28 @@ export function Details(){
                     alt="Foto do usuário" 
                   />
 
-                  <p>Por Daiane Farias </p>
+                  <p>Por {user.name}</p>
                   <FiClock/>
                   <p>23/05/22 às 08:00</p>
                 </Writer>
 
-                <Section>
-                  <Tags>
-                    <Tag title="Ficção Ciêntífica"/>
-                    <Tag title="Drama"/>
-                    <Tag title="Família"/>
-                  </Tags>
-              
-                </Section>
+                { data.tags && 
+                  <Section>
+                    <Tags>
+                      {
+                        data.tags.map(tag => (
+                          <Tag 
+                            key={tag.id}
+                            title={tag.name}
+                          />
+                        ))
+                      }
+                    </Tags>
+                  </Section>
+                }
 
                 <p>
-                  {data.descripton}
+                  {data.description}
                 </p>
 
               </Content>
