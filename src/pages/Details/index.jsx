@@ -52,9 +52,9 @@ export function Details(){
 
                 <Writer>
                   <img 
-                    class="writer"
+                    className="writer"
                     src="https://github.com/daiaanebarbosaf.png" 
-                    alt="Foto do usuário" 
+                    alt= {user.name}
                   />
 
                   <p>Por {user.name}</p>
