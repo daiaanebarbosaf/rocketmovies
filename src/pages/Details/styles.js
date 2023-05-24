@@ -125,3 +125,22 @@ export const Tags = styled.div`
   gap: 0.5rem;
 `;
 
+export const ButtonDelete = styled.button`
+  width: 50%;
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_1000};
+
+  color: ${({ theme }) => theme.COLORS.PINK};
+
+  height: 3rem;
+  border: 0;
+  padding: 0 1.6rem;
+  margin-top: 1.6rem;
+  border-radius: 10px;
+
+  font-weight: 500;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+`;
+
