@@ -4,8 +4,10 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { api } from '../../services/api';
 import { useAuth } from '../../hooks/auth';
 
+import moment from "moment-timezone";
+
 import { FiClock, FiArrowLeft } from 'react-icons/fi';
-import { Container, Content, Writer, Tags } from "./styles.js";
+import { Container, Content, Writer, Tags, ButtonDelete } from "./styles.js";
 import { Header } from "../../components/Header";
 
 import { Section } from "../../components/Section";
@@ -32,11 +34,23 @@ export function Details(){
     fetMovie();
   }, []);
 
+  const momentDate = moment.utc(data.updated_at).tz('America/Sao_Paulo').format('DD/MM/YYYY HH:mm:ss');
+
+
   const navigate = useNavigate();
   
   function handleBack() {
-		navigate(-1);
+		navigate("/");
 	}
+
+  async function handleRemove(){
+    const confirm = window.confirm("Deseja realmente remover a nota?");
+
+    if(confirm){
+      await api.delete(`/notes/${params.id}`);
+      navigate("/");
+    }
+  }
 
   return(
     <Container>
@@ -48,7 +62,11 @@ export function Details(){
               <Content>
                 <div className="back">
                   <FiArrowLeft />
-                  <ButtonText onClick={handleBack} className="back" title="Voltar" />
+                  <ButtonText 
+                    onClick={handleBack} 
+                    className="back" 
+                    title="Voltar" 
+                  />
                 </div>  
 
                 <div className="title">
@@ -65,7 +83,7 @@ export function Details(){
 
                   <p>Por {user.name}</p>
                   <FiClock/>
-                  <p>23/05/22 às 08:00</p>
+                  <p>{momentDate}</p>
                 </Writer>
 
                 <p>
@@ -78,7 +96,7 @@ export function Details(){
                       {
                         data.tags.map(tag => (
                           <Tag 
-                            key={tag.id}
+                            key={String(tag.id)}
                             title={tag.name}
                           />
                         ))
@@ -86,6 +104,10 @@ export function Details(){
                     </Tags>
                   </Section>
                 }
+
+            <ButtonDelete onClick={handleRemove}>
+              Excluir filme
+            </ButtonDelete>
 
               </Content>
           </main>
