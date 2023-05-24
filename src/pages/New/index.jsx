@@ -124,9 +124,6 @@ export function New() {
           </div>
 
           <div className="buttons-spacing-between">
-            <ButtonDelete>
-              Excluir filme
-            </ButtonDelete>
             <div className="button-save">
               <Button 
                 title="Salvar" 
