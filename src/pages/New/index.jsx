@@ -19,12 +19,17 @@ import { Container, Form, ButtonDelete } from './styles';
 
 export function New() {
   const [title, setTitle] = useState("");
+  const [rating, setRating] = useState("");
   const [description, setDescription] = useState("");
 
   const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState("");
 
   const navigate = useNavigate();
+
+  function handleBack() {
+		navigate(-1);
+	}
 
   function handleAddTag(){
     setTags(prevState => [...prevState, newTag]);
@@ -40,12 +45,19 @@ export function New() {
       return alert("Digite o título da nota");
     }
 
+    const isRatingValid = rating >= 0 && rating <= 5;
+
+    if (!isRatingValid) {
+      return alert("A nota do filme deve ser entre 0 e 5");
+    }
+
     if(newTag){
       return alert("Você deixou uma tag no campo para adicionar, mas não clicou em adiconar. Clique para adicionar ou deixe o campo vazio.");
     }
 
     await api.post("/notes", {
       title,
+      rating,
       description,
       tags
     });
@@ -62,7 +74,7 @@ export function New() {
       <main>
         <Form>
           <header>
-            <Link to="/">
+            <Link to="/" onClick={handleBack}>
             <FiArrowLeft/>
               Voltar
             </Link>
@@ -76,12 +88,19 @@ export function New() {
             />
             <Input 
               placeholder="Sua nota (de 0 a 5)"
-              onChange={e => setDescription(e.target.value)}
+              type="number"
+              min="0"
+              max="5"
+              value={rating}
+              onChange={e => setRating(e.target.value)}
 
             />
           </div>
 
-          <Textarea placeholder="Observações"/>
+          <Textarea 
+            placeholder="Observações"
+            onChange={e => setDescription(e.target.value)} 
+          />
 
           <Section title="Marcadores"/>
           <div className="spacing-between tags">
