@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 import { api } from '../../services/api';
 import { useAuth } from '../../hooks/auth';
@@ -32,6 +32,12 @@ export function Details(){
     fetMovie();
   }, []);
 
+  const navigate = useNavigate();
+  
+  function handleBack() {
+		navigate(-1);
+	}
+
   return(
     <Container>
 
@@ -42,25 +48,29 @@ export function Details(){
               <Content>
                 <div className="back">
                   <FiArrowLeft />
-                  <ButtonText className="back" title="Voltar"/>
+                  <ButtonText onClick={handleBack} className="back" title="Voltar" />
                 </div>  
 
                 <div className="title">
                   <h1>{data.title}</h1>
-                  <Rating />
+                  <Rating note={data.rating} noteEmpty/>
                 </div>
 
                 <Writer>
                   <img 
                     className="writer"
                     src="https://github.com/daiaanebarbosaf.png" 
-                    alt= {user.name}
+                    alt={user.name}
                   />
 
                   <p>Por {user.name}</p>
                   <FiClock/>
                   <p>23/05/22 às 08:00</p>
                 </Writer>
+
+                <p>
+                  {data.description}
+                </p>
 
                 { data.tags && 
                   <Section>
@@ -76,10 +86,6 @@ export function Details(){
                     </Tags>
                   </Section>
                 }
-
-                <p>
-                  {data.description}
-                </p>
 
               </Content>
           </main>
