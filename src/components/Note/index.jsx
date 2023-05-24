@@ -7,7 +7,7 @@ export function Note({ data, ...rest }){
   return(
     <Container {...rest}>
       <h1>{data.title}</h1>
-      <Rating/>
+      <Rating note={data.rating} noteEmpty/>
       <p>
         {data.description}
       </p>
@@ -15,9 +15,9 @@ export function Note({ data, ...rest }){
         data.tags &&
         <footer>
           {
-            data.tags.map( tag => 
+            data.tags.map((tag) => (
               <Tag key={tag.id} title={tag.name}/>
-            )
+            ))
           }
         </footer>
       }
