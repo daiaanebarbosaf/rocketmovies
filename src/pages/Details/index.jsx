@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { api } from '../../services/api';
 import { useAuth } from '../../hooks/auth';
 
-import moment from "moment-timezone";
+import  moment  from 'moment-timezone';
 
 import { FiClock, FiArrowLeft } from 'react-icons/fi';
 import { Container, Content, Writer, Tags, ButtonDelete } from "./styles.js";
@@ -18,7 +18,7 @@ import { Rating } from "../../components/Rating";
 
 
 export function Details(){
-  const [ data, setData ] = useState(null);
+  const [ data, setData ] = useState({});
 
   const params = useParams();
 
@@ -35,7 +35,6 @@ export function Details(){
   }, []);
 
   const momentDate = moment.utc(data.updated_at).tz('America/Sao_Paulo').format('DD/MM/YYYY HH:mm:ss');
-
 
   const navigate = useNavigate();
   
