@@ -14,6 +14,7 @@ import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 
+
 export function Profile() {
   const { user, updateProfile } = useAuth();
 
