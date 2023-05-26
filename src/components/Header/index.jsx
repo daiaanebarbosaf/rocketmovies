@@ -1,27 +1,24 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import { Container, Profile, Search, Brand, Logout  } from './styles';
 
 import { useAuth } from '../../hooks/auth';
+import { api } from '../../services/api';
 
 import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
 
-
 export function Header({children}) {
-  const { signOut } = useAuth();
-  const { user } = useAuth();
+  const { signOut, user } = useAuth();
+  const navigation = useNavigate();
+
+  function handleSignOut(){
+    navigation("/");
+    signOut();
+  }
 
   const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
 
-  const [avatar, setAvatar] = useState(avatarUrl);
-  const [avatarFile, setAvatarFile] = useState(null);
-
-  function handleChangeAvatar(event){
-    const file = event.target.files[0];
-    setAvatarFile(file);
-
-    const imagePreview = URL.createObjectURL(file);
-    setAvatar(imagePreview);
-  }
 
   return (
     <Container>
@@ -39,12 +36,12 @@ export function Header({children}) {
           <strong>{user.name}</strong>
         </div>
         <img 
-          src={avatar}
+          src={avatarUrl}
           alt={user.name} 
         />
       </Profile>
 
-      <Logout onClick={signOut}>
+      <Logout onClick={handleSignOut}>
         Sair
       </Logout>
     </Container>
