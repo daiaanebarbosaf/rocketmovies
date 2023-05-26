@@ -5,6 +5,7 @@ import { api } from '../../services/api';
 import { useAuth } from '../../hooks/auth';
 
 import  moment  from 'moment-timezone';
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
 
 import { FiClock, FiArrowLeft } from 'react-icons/fi';
 import { Container, Content, Writer, Tags, ButtonDelete } from "./styles.js";
@@ -23,6 +24,8 @@ export function Details(){
   const params = useParams();
 
   const { user } = useAuth();
+ 
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
 
   useEffect(() => {
     async function fetMovie(){
@@ -76,7 +79,7 @@ export function Details(){
                 <Writer>
                   <img 
                     className="writer"
-                    src="https://github.com/daiaanebarbosaf.png" 
+                    src={avatarUrl}
                     alt={user.name}
                   />
 
