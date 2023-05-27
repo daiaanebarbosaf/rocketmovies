@@ -15,7 +15,7 @@ import { Button } from '../../components/Button';
 
 import { api } from '../../services/api';
 
-import { Container, Form, ButtonDelete } from './styles';
+import { Container, Form } from './styles';
 
 export function New() {
   const [title, setTitle] = useState("");
@@ -32,8 +32,15 @@ export function New() {
 	}
 
   function handleAddTag(){
-    setTags(prevState => [...prevState, newTag]);
+
+    if(newTag === ""){
+      alert("Insira conteúdo na tag, você não pode deixar o campo está vazio");
+    } else {
+      setTags(prevState => [...prevState, newTag]); 
+    }
+
     setNewTag("");
+    console.log(newTag)
   }
 
   function handleRemoveTag(deleted){
@@ -51,9 +58,8 @@ export function New() {
       return alert("A nota do filme deve ser entre 0 e 5");
     }
 
-    if(newTag){
-      return alert("Você deixou uma tag no campo para adicionar, mas não clicou em adiconar. Clique para adicionar ou deixe o campo vazio.");
-    }
+    alert("Nota criada com sucesso!");
+    navigate("/");
 
     await api.post("/notes", {
       title,
@@ -62,8 +68,7 @@ export function New() {
       tags
     });
 
-    alert("Nota criada com sucesso!");
-    navigate(-1);
+    
   }
 
   return(
