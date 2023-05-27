@@ -17,7 +17,7 @@ export const Container = styled.div`
   > main {
     max-width: 1137px;
 
-    margin: 30px auto;
+    margin: 1rem 6rem;
 
     grid-area: content;
     overflow-y: auto;
@@ -46,8 +46,12 @@ export const Container = styled.div`
 export const AddMovies = styled.div`
     grid-area: addmovies;
 
-    width: 1130px;
-    margin-left: 120px;
+    > h2 {
+      margin-left: -2rem;
+    }
+
+    width: 1100px;
+    margin-left: 130px;
 
     display: flex;
     align-items: center;
@@ -56,7 +60,7 @@ export const AddMovies = styled.div`
 
 export const Content = styled.div`
     grid-area: content;
-    margin-right: 1rem;
+    
 `;
 
 export const NewMovie = styled(Link)`
