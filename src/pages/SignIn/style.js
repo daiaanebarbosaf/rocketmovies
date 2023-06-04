@@ -23,8 +23,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-
+  
     
     > h1 {
       font-size: 2.7rem;
@@ -48,7 +47,7 @@ export const Container = styled.div`
     > a {
      
       margin-top: 2rem;
-      margin-left: 6rem;
+      margin-left: 7rem;
       color:${({ theme }) => theme.COLORS.PINK};
       
     }
