@@ -2,10 +2,16 @@ import styled from "styled-components";
 import backgroundImg from '../../assets/bg.png';
 
 export const Container = styled.div`
+  width: 100%;
   height: 100vh;
 
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 1024px){
+    align-items: stretch;
+  }
 
 `;
 
