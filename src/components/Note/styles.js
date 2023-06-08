@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
-  width: 100%;
+  width: 80%;
+  margin-top: 2rem;
+
   background-color: ${({ theme }) => theme.COLORS.PINK_100};
 
   border: none;
@@ -39,4 +41,9 @@ export const Container = styled.button`
 
     gap: 0.5rem;
   }
+
+@media (min-width: 1024px){
+  width: 100%;
+}
+
 `;
