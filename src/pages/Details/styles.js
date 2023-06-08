@@ -4,46 +4,51 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
 
-  display: grid;
-  grid-template-rows: 5rem auto;
-  grid-template-areas:
-  "header"
-  "content";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  > main {
-    width: 100%;
-    max-width: 1137px;
 
-    margin: 40px auto;
-    
+  @media (min-width: 700px){
+  
+    display: grid;
+    grid-template-rows: 5rem auto;
+    grid-template-areas:
+    "header"
+    "content";
 
-    grid-area: content;
-    overflow-y: auto;
-    padding: 3.4rem 1rem;
+    > main {
+      width: 100%;
+      max-width: 1137px;
 
-    svg {
-      color: ${({ theme }) => theme.COLORS.PINK};
-      margin-right: 0.5rem;
+      margin: 40px auto;
+      
+
+      grid-area: content;
+      overflow-y: auto;
+      padding: 3.4rem 1rem;
+
+      svg {
+        color: ${({ theme }) => theme.COLORS.PINK};
+        margin-right: 0.5rem;
+      }
     }
-  }
 
 
-  > main::-webkit-scrollbar {
-    width: 8px;
-   
-  }
-  
-  > main::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.COLORS.PINK};
-    border-radius: 8px;
-  
+    > main::-webkit-scrollbar {
+      width: 8px;
+    
+    }
+    
+    > main::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => theme.COLORS.PINK};
+      border-radius: 8px;
+    
+    }
   }
 `;
 
 export const Content = styled.div`
-  max-width: 80rem;
-
-  margin: 0 auto;
 
   display: flex;
   flex-direction: column;
@@ -85,9 +90,29 @@ export const Content = styled.div`
 
     text-align: justify;
   }
+
+  @media (max-width: 700px){
+    display: flex;
+    align-items: center;
+
+    .back {
+      margin-top: 1rem;
+      gap: 0.2rem;
+      > svg {
+        margin-top: 1rem;
+      }
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
 `;
 
 export const Writer = styled.div`
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -113,6 +138,14 @@ export const Writer = styled.div`
     font-size: 1.5rem;
 
     margin-left: 1rem;
+    margin-right: 0.5rem;
+  }
+
+  @media (max-width: 700px){
+    .writer {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 `;
 
