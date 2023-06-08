@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 
 
 export const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+
+
 @media (min-width: 1024px){
   width: 100%;
   height: 100vh;
@@ -14,7 +18,6 @@ export const Container = styled.div`
   "addmovies"
   "content"
   ;
-
 
   > main {
     max-width: 1137px;
@@ -48,8 +51,18 @@ export const Container = styled.div`
 `;
 
 export const AddMovies = styled.div`
-    grid-area: addmovies;
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
+  margin-top: 2rem;
+  gap: 2rem;
+
+  @media (min-width: 1024px){
+    grid-area: addmovies;
+    flex-direction: row;
+    
     > h2 {
       margin-left: -2rem;
     }
@@ -60,30 +73,24 @@ export const AddMovies = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
 `;
 
 export const Content = styled.div`
-    grid-area: content;
-    
+  grid-area: content;
 `;
 
 export const NewMovie = styled(Link)`
-  width: 20%;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  
 
   background-color: ${({ theme }) => theme.COLORS.PINK};
   color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-
-  height: 3rem;
-  padding: 0 1.6rem;
-
-  border-radius: 10px;
-
-  font-weight: 500;
-
+    
   &:disabled {
     opacity: 0.5;
   }
@@ -91,4 +98,18 @@ export const NewMovie = styled(Link)`
   > svg {
     margin-right: 0.5rem;
   }
+
+  height: 3rem;
+  padding: 0 1.6rem;
+
+  border-radius: 10px;
+
+  font-weight: 500;
+  
+  @media (min-width: 1024px){
+    width: 20%;
+
+  }
+
+
 `;
