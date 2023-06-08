@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 export const Container = styled.header`
 
-  
-
   @media (max-width: 700px){
     width: 100%;
 
@@ -39,8 +37,6 @@ export const Container = styled.header`
     }
   }
   
-
-
 `;
 
 export const Profile = styled(Link)`
@@ -89,7 +85,9 @@ export const Search = styled.div`
   padding: 0 64px;
   flex-grow: 1;
 
-  margin-bottom: 2rem;
+  @media (max-width: 700px){
+    margin-bottom: 1rem;
+  }
 `;
 
 export const Brand = styled.div`
