@@ -57,6 +57,7 @@ export const Profile = styled(Link)`
   justify-content: flex-end;
 
   > img {
+    
     width: 56px;
     height: 56px;
 
@@ -76,16 +77,10 @@ export const Profile = styled(Link)`
     strong {
       font-size: 18px;
       color: ${({ theme }) => theme.COLORS.WHITE};
-
-      @media (max-width: 700px){
-        margin-bottom: 1rem;
-      }
+      margin-bottom: 0.5rem;
     }
   }
 
-  @media (max-width: 700px){
-    margin-bottom: 1rem;
-  }
 `;
 
 export const Search = styled.div`
@@ -94,7 +89,7 @@ export const Search = styled.div`
   padding: 0 64px;
   flex-grow: 1;
 
-  
+  margin-bottom: 2rem;
 `;
 
 export const Brand = styled.div`
@@ -113,8 +108,9 @@ export const Brand = styled.div`
 
   @media (max-width: 700px){
     > h1 {
+      font-size: 2.5rem;
       margin-top: 5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
   }
 `;
