@@ -78,7 +78,15 @@ export const AddMovies = styled.div`
 `;
 
 export const Content = styled.div`
-  grid-area: content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+  
+  @media (min-width: 1024px){
+    grid-area: content;
+  }
 `;
 
 export const NewMovie = styled(Link)`
