@@ -42,4 +42,8 @@ export const Container = styled.div`
   
     }
   }
+
+  @media (max-width: 924px){
+    width: 100%;
+  }
 `;
