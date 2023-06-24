@@ -13,9 +13,5 @@ export const Container = styled.span`
 
   color: ${({ theme }) => theme.COLORS.WHITE_200};
   background-color: ${({ theme }) => theme.COLORS.PINK_100};
-
-  @media (max-width: 924px){
-    display: flex;
-  }
   
 `;
