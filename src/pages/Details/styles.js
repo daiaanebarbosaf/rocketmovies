@@ -91,7 +91,7 @@ export const Content = styled.div`
     text-align: justify;
   }
 
-  @media (max-width: 700px){
+  @media (max-width: 924px){
     display: flex;
     align-items: center;
 
@@ -106,6 +106,12 @@ export const Content = styled.div`
     .title {
       display: flex;
       flex-direction: column;
+
+      > h1 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        padding-top: 2rem;
+      }
     }
 
   }
@@ -144,7 +150,7 @@ export const Writer = styled.div`
   @media (max-width: 700px){
     .writer {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
     }
   }
 `;
