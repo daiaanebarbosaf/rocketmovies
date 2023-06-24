@@ -67,8 +67,6 @@ export function New() {
       description,
       tags
     });
-
-    
   }
 
   return(
