@@ -116,8 +116,5 @@ export const NewMovie = styled(Link)`
   
   @media (min-width: 1024px){
     width: 20%;
-
   }
-
-
 `;
