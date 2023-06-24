@@ -17,4 +17,8 @@ export const Container = styled.button`
   &:disabled {
     opacity: 0.5;
   }
+  
+  @media (max-width: 924px){
+    width: 8rem;
+  }
 `;
