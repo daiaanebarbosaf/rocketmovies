@@ -48,6 +48,26 @@ export const Container = styled.div`
     gap: 2rem;
     margin-bottom: 1rem;
   }
+
+  @media (max-width: 924px){
+    header {
+      display: flex;
+      align-items: center;
+    }
+
+    main {
+      margin-top: 5rem;
+      display: flex;
+    }
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  }
 `;
 
 export const Form = styled.form`
@@ -86,6 +106,12 @@ export const Form = styled.form`
         margin-right: 1rem;
       }
     }
+  }
+
+  @media (max-width: 924px){
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
