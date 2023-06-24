@@ -25,6 +25,21 @@ export const Container = styled.div`
     > svg {
       color: ${({ theme }) => theme.COLORS.PINK};
     }
+
+    @media (max-width: 924px){
+      padding: 0;
+      margin-bottom: 5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > a {
+        margin-bottom: 3rem;
+      }
+
+    }
+
   }
 `;
 
