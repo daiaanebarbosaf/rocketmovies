@@ -121,8 +121,8 @@ export const Logout = styled.button`
   color: ${({ theme }) => theme.COLORS.GRAY_100};
 
   position: absolute;
-  top: 68px;
-  right: 146px;
+  top: 57px;
+  right: 151px;
 
   @media (max-width: 700px){
     position: initial;
