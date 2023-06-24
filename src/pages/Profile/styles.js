@@ -50,6 +50,12 @@ export const Form = styled.form`
   > div:nth-child(4){
     margin-top: 24px;
   }
+
+  @media (max-width: 924px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Avatar = styled.div`
