@@ -56,8 +56,14 @@ export const Container = styled.div`
     }
 
     main {
-      margin-top: 5rem;
+      margin-top: 7rem;
       display: flex;
+    }
+
+    .tags {
+    
+      align-items: center;
+      justify-content: center;
     }
 
     .inputs {
@@ -112,6 +118,18 @@ export const Form = styled.form`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .buttons-spacing-between {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .button-save {
+      width: 100%;
+    }
   }
 `;
 
